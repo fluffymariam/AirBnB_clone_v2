@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Console Module """
+""" Console Module for my aibnb prjet"""
 import cmd
 import sys
 from models.base_model import BaseModel
@@ -13,7 +13,7 @@ from models.review import Review
 
 
 class HBNBCommand(cmd.Cmd):
-    """ Contains the functionality for the HBNB console"""
+    """ Contains the functionality the HBNB consol aib bbbe"""
 
     # determines prompt for interactive/non-interactive modes
     prompt = '(hbnb) ' if sys.__stdin__.isatty() else ''
@@ -36,10 +36,10 @@ class HBNBCommand(cmd.Cmd):
             print('(hbnb)')
 
     def precmd(self, line):
-        """Reformat command line for advanced command syntax.
+        """Reformat the cmd line for adced command syntax.
 
         Usage: <class name>.<command>([<id> [<*args> or <**kwargs>]])
-        (Brackets denote optional fields in usage example.)
+        (Brackets denote optional fies in usage example.)
         """
         _cmd = _cls = _id = _args = ''  # initialize line elements
 
@@ -87,34 +87,34 @@ class HBNBCommand(cmd.Cmd):
             return line
 
     def postcmd(self, stop, line):
-        """Prints if isatty is false"""
+        """Prints if isatty is false bbb"""
         if not sys.__stdin__.isatty():
             print('(hbnb) ', end='')
         return stop
 
     def do_quit(self, command):
-        """ Method to exit the HBNB console"""
+        """ Method to exit the HBNB consbbbole"""
         exit()
 
     def help_quit(self):
-        """ Prints the help documentation for quit  """
+        """ Prints the help documentation fbbbor quit  """
         print("Exits the program with formatting\n")
 
     def do_EOF(self, arg):
-        """ Handles EOF to exit program """
+        """ Handles EOF to exit programdddd """
         print()
         exit()
 
     def help_EOF(self):
-        """ Prints the help documentation for EOF """
+        """ Prints the help documentation ffffor EOF """
         print("Exits the program without formatting\n")
 
     def emptyline(self):
-        """ Overrides the emptyline method of CMD """
+        """ Overrides the emptyline method of freCMD """
         pass
 
     def do_create(self, args):
-        """ Create an object of any class"""
+        """ Create an object of any cladddss"""
         try:
             if not args:
                 raise SyntaxError()
@@ -135,7 +135,7 @@ class HBNBCommand(cmd.Cmd):
         print(new_instance.id)
 
     def help_create(self):
-        """ Help information for the create method """
+        """ Help information for the creatddfe method """
         print("Creates a class of any type")
         print("[Usage]: create <className>\n")
 
@@ -168,7 +168,7 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def help_show(self):
-        """ Help information for the show command """
+        """ Help information for the show comddmand """
         print("Shows an individual instance of a class")
         print("[Usage]: show <className> <objectId>\n")
 
@@ -201,12 +201,12 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def help_destroy(self):
-        """ Help information for the destroy command """
+        """ Help information for the destroy coddmmand """
         print("Destroys an individual instance of a class")
         print("[Usage]: destroy <className> <objectId>\n")
 
     def do_all(self, args):
-        """ Shows all objects, or all objects of a class"""
+        """ Shows all objects, or all objects of dda class"""
         print_list = []
 
         if args:
